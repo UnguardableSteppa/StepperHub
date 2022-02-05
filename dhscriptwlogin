@@ -1,0 +1,124 @@
+--Made By Steppa <3
+
+local SteppaHub = Instance.new("ScreenGui")
+local LoginFrame = Instance.new("Frame")
+local Label = Instance.new("TextLabel")
+local KeyLabel = Instance.new("TextLabel")
+local Keybox = Instance.new("TextBox")
+local Submit = Instance.new("TextButton")
+local MainFrame = Instance.new("Frame")
+local CorrectLabel = Instance.new("TextLabel")
+local Script = Instance.new("TextButton")
+local X = Instance.new("TextButton")
+
+--Properties:
+
+SteppaHub.Name = "SteppaHub"
+SteppaHub.Parent = game.CoreGui
+
+LoginFrame.Name = "LoginFrame"
+LoginFrame.Parent = SteppaHub
+LoginFrame.BackgroundColor3 = Color3.fromRGB(45, 45, 45)
+LoginFrame.BorderColor3 = Color3.fromRGB(45, 45, 45)
+LoginFrame.Position = UDim2.new(0.31490159, 0, 0.228628218, 0)
+LoginFrame.Size = UDim2.new(0, 394, 0, 273)
+LoginFrame.Active = true
+LoginFrame.Draggable = true
+
+Label.Name = "Label"
+Label.Parent = LoginFrame
+Label.BackgroundColor3 = Color3.fromRGB(45, 45, 45)
+Label.BorderColor3 = Color3.fromRGB(45, 45, 45)
+Label.Size = UDim2.new(0, 394, 0, 34)
+Label.Font = Enum.Font.PatrickHand
+Label.Text = "Steppa Hub Login"
+Label.TextColor3 = Color3.fromRGB(255, 255, 255)
+Label.TextSize = 49.000
+
+KeyLabel.Name = "KeyLabel"
+KeyLabel.Parent = LoginFrame
+KeyLabel.BackgroundColor3 = Color3.fromRGB(45, 45, 45)
+KeyLabel.BorderColor3 = Color3.fromRGB(45, 45, 45)
+KeyLabel.Position = UDim2.new(0.0913705677, 0, 0.406593412, 0)
+KeyLabel.Size = UDim2.new(0, 32, 0, 50)
+KeyLabel.Font = Enum.Font.Garamond
+KeyLabel.Text = "Key :"
+KeyLabel.TextColor3 = Color3.fromRGB(249, 249, 249)
+KeyLabel.TextSize = 52.000
+
+Keybox.Name = "Keybox"
+Keybox.Parent = LoginFrame
+Keybox.BackgroundColor3 = Color3.fromRGB(109, 109, 109)
+Keybox.BorderColor3 = Color3.fromRGB(45, 45, 45)
+Keybox.Position = UDim2.new(0.266497463, 0, 0.406593412, 0)
+Keybox.Size = UDim2.new(0, 274, 0, 50)
+Keybox.Font = Enum.Font.SourceSans
+Keybox.Text = "???"
+Keybox.TextColor3 = Color3.fromRGB(255, 255, 255)
+Keybox.TextSize = 30.000
+
+Submit.Name = "Submit"
+Submit.Parent = LoginFrame
+Submit.BackgroundColor3 = Color3.fromRGB(109, 109, 109)
+Submit.BorderColor3 = Color3.fromRGB(45, 45, 45)
+Submit.Position = UDim2.new(0.370558381, 0, 0.835164845, 0)
+Submit.Size = UDim2.new(0, 102, 0, 36)
+Submit.Font = Enum.Font.Oswald
+Submit.Text = "Sumbit"
+Submit.TextColor3 = Color3.fromRGB(255, 255, 255)
+Submit.TextSize = 36.000
+Submit.MouseButton1Down:connect(function()
+if Keybox.Text == "SteppaCenDemiSex" then
+		LoginFrame.Visible = false
+		MainFrame.Visible = true
+end
+
+end)
+
+MainFrame.Name = "MainFrame"
+MainFrame.Parent = SteppaHub
+MainFrame.BackgroundColor3 = Color3.fromRGB(45, 45, 45)
+MainFrame.BorderColor3 = Color3.fromRGB(45, 45, 45)
+MainFrame.Position = UDim2.new(0.00562325679, 0, 0.228628233, 0)
+MainFrame.Size = UDim2.new(0, 200, 0, 272)
+MainFrame.Visible = false
+MainFrame.Active = true
+MainFrame.Draggable = true
+
+CorrectLabel.Name = "CorrectLabel"
+CorrectLabel.Parent = MainFrame
+CorrectLabel.BackgroundColor3 = Color3.fromRGB(45, 45, 45)
+CorrectLabel.BorderColor3 = Color3.fromRGB(45, 45, 45)
+CorrectLabel.Size = UDim2.new(0, 200, 0, 50)
+CorrectLabel.Font = Enum.Font.Sarpanch
+CorrectLabel.Text = "Key Correct!"
+CorrectLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+CorrectLabel.TextSize = 43.000
+
+Script.Name = "Script"
+Script.Parent = MainFrame
+Script.BackgroundColor3 = Color3.fromRGB(62, 62, 62)
+Script.BorderColor3 = Color3.fromRGB(45, 45, 45)
+Script.Position = UDim2.new(0.165000007, 0, 0.408088267, 0)
+Script.Size = UDim2.new(0, 133, 0, 51)
+Script.Font = Enum.Font.SourceSans
+Script.Text = "Click For Script"
+Script.TextColor3 = Color3.fromRGB(255, 255, 255)
+Script.TextSize = 23.000
+Script.MouseButton1Down:connect(function()
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/UnguardableSteppa/Da-Hood-Hub/main/README.md'),true))()
+end)
+
+X.Name = "X"
+X.Parent = MainFrame
+X.BackgroundColor3 = Color3.fromRGB(45, 45, 45)
+X.BorderColor3 = Color3.fromRGB(45, 45, 45)
+X.Position = UDim2.new(0.375, 0, 0.786764681, 0)
+X.Size = UDim2.new(0, 48, 0, 50)
+X.Font = Enum.Font.Nunito
+X.Text = "X"
+X.TextColor3 = Color3.fromRGB(255, 0, 0)
+X.TextSize = 49.000
+X.MouseButton1Down:connect(function()
+	MainFrame.Visible = false
+end)
